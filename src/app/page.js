@@ -32,7 +32,7 @@ export default function Home() {
     formData.append("mask_sensitive_data", maskSensitiveData.toString());
 
     try {
-      const response = await fetch(`http://${process.env.NEXT_PUBLIC_BACKEND_IP}:8000/process-pdf/`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_IP}:8000/process-pdf/`, {
         method: "POST",
         body: formData,
       });
